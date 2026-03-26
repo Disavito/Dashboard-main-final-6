@@ -39,7 +39,7 @@ const AdminClockManager: React.FC = () => {
               onClick={() => setIsManualMode(!isManualMode)}
               className={cn(
                 "rounded-xl border-2 font-bold transition-all",
-                isManualMode ? "border-[#9E7FFF] text-[#9E7FFF] bg-[#9E7FFF]/5" : "border-gray-100"
+                isManualMode ? "border-[#4892CC] text-[#4892CC] bg-[#4892CC]/5" : "border-gray-100"
               )}
             >
               {isManualMode ? <ToggleRight className="mr-2 h-5 w-5" /> : <ToggleLeft className="mr-2 h-5 w-5" />}
@@ -56,7 +56,7 @@ const AdminClockManager: React.FC = () => {
                 disabled={isLoadingColaboradores}
               >
                 <SelectTrigger className="h-12 rounded-xl border-gray-100 bg-gray-50 font-bold">
-                  <Users className="mr-2 h-4 w-4 text-[#9E7FFF]" />
+                  <Users className="mr-2 h-4 w-4 text-[#4892CC]" />
                   <SelectValue placeholder={isLoadingColaboradores ? "Cargando..." : "Seleccionar colaborador"} />
                 </SelectTrigger>
                 <SelectContent className="rounded-xl">
@@ -80,7 +80,7 @@ const AdminClockManager: React.FC = () => {
                       !selectedDate && "text-muted-foreground"
                     )}
                   >
-                    <CalendarIcon className="mr-2 h-4 w-4 text-[#9E7FFF]" />
+                    <CalendarIcon className="mr-2 h-4 w-4 text-[#4892CC]" />
                     {selectedDate ? format(selectedDate, "PPP", { locale: es }) : <span>Seleccionar fecha</span>}
                   </Button>
                 </PopoverTrigger>

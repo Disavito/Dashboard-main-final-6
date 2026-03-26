@@ -224,7 +224,7 @@ function SocioDocuments() {
           {label}
           <div className="flex flex-col">
             {isActive ? (
-              sortConfig.direction === 'asc' ? <ArrowUp className="w-3 h-3 text-[#9E7FFF]" /> : <ArrowDown className="w-3 h-3 text-[#9E7FFF]" />
+              sortConfig.direction === 'asc' ? <ArrowUp className="w-3 h-3 text-[#4892CC]" /> : <ArrowDown className="w-3 h-3 text-[#4892CC]" />
             ) : (
               <ArrowUpDown className="w-3 h-3 text-gray-300 group-hover:text-gray-400" />
             )}
@@ -235,9 +235,9 @@ function SocioDocuments() {
   };
 
   return (
-    <div className="p-6 space-y-6 bg-[#F8F9FC] min-h-screen">
+    <div className="p-6 space-y-6 bg-[#FFFFFF] min-h-screen">
       <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-2 text-[#9E7FFF]">
+        <div className="flex items-center gap-2 text-[#4892CC]">
           <FileText className="w-6 h-6" />
           <h1 className="text-2xl font-bold">Socio y Documentos</h1>
         </div>
@@ -248,7 +248,7 @@ function SocioDocuments() {
 
       <Tabs defaultValue="expedientes" className="w-full">
         <TabsList className="bg-white border border-gray-200 p-1 mb-4">
-          <TabsTrigger value="expedientes" className="data-[state=active]:bg-[#9E7FFF] data-[state=active]:text-white font-semibold px-6">
+          <TabsTrigger value="expedientes" className="data-[state=active]:bg-[#4892CC] data-[state=active]:text-white font-semibold px-6">
             EXPEDIENTES
           </TabsTrigger>
           <TabsTrigger value="solicitudes" className="data-[state=active]:bg-red-500 data-[state=active]:text-white font-semibold px-6 flex gap-2">
@@ -263,7 +263,7 @@ function SocioDocuments() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
               <Input 
                 placeholder="Buscar por DNI, nombre, apellidos, Mz o Lote..." 
-                className="pl-10 bg-white border-gray-200 focus:ring-[#9E7FFF]/30"
+                className="pl-10 bg-white border-gray-200 focus:ring-[#4892CC]/30"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -303,7 +303,7 @@ function SocioDocuments() {
                   {loading ? (
                     <tr>
                       <td colSpan={10} className="p-12 text-center">
-                        <Loader2 className="animate-spin h-8 w-8 text-[#9E7FFF] mx-auto" />
+                        <Loader2 className="animate-spin h-8 w-8 text-[#4892CC] mx-auto" />
                       </td>
                     </tr>
                   ) : filteredSocios.length === 0 ? (
@@ -322,7 +322,7 @@ function SocioDocuments() {
                       <td className="p-4 text-center font-bold text-gray-700">{socio.mz || 'N/A'}</td>
                       <td className="p-4 text-center font-bold text-gray-700">{socio.lote || 'N/A'}</td>
                       <td className="p-4 text-center">
-                        <Checkbox checked={socio.is_lote_medido} disabled className="data-[state=checked]:bg-[#9E7FFF] data-[state=checked]:border-[#9E7FFF]" />
+                        <Checkbox checked={socio.is_lote_medido} disabled className="data-[state=checked]:bg-[#4892CC] data-[state=checked]:border-[#4892CC]" />
                       </td>
                       <td className="p-4 text-center">
                         <Badge 

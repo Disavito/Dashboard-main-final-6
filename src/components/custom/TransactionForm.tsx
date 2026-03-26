@@ -199,7 +199,7 @@ export default function TransactionForm({ initialData, onClose, onSuccess }: Tra
                   </FormControl>
                   <SelectContent className="rounded-xl">
                     <SelectItem value="Ingreso" className="font-bold text-emerald-600">Ingreso</SelectItem>
-                    <SelectItem value="Recibo de Pago" className="font-bold text-indigo-600">Recibo de Pago</SelectItem>
+                    <SelectItem value="Recibo de Pago" className="font-bold text-corp-blue">Recibo de Pago</SelectItem>
                     <SelectItem value="Gasto" className="font-bold text-orange-600">Gasto (Salida)</SelectItem>
                     <SelectItem value="Devolución" className="font-bold text-amber-600">Devolución (Salida)</SelectItem>
                     <SelectItem value="Anulación" className="font-bold text-red-600">Anulación (Monto 0)</SelectItem>
@@ -253,7 +253,7 @@ export default function TransactionForm({ initialData, onClose, onSuccess }: Tra
                       className="pl-10 h-12 bg-slate-50 border-none rounded-xl font-mono" 
                     />
                     {isSearchingDni ? (
-                      <Loader2 className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-indigo-500 animate-spin" />
+                      <Loader2 className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-corp-blue animate-spin" />
                     ) : (
                       <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
                     )}
@@ -434,7 +434,7 @@ export default function TransactionForm({ initialData, onClose, onSuccess }: Tra
               "flex-1 h-14 rounded-xl font-bold text-white shadow-lg transition-all active:scale-95",
               transactionType === 'Anulación' ? "bg-red-600 hover:bg-red-700 shadow-red-100" :
               (transactionType === 'Devolución' || transactionType === 'Gasto') ? "bg-amber-600 hover:bg-amber-700 shadow-amber-100" :
-              "bg-indigo-600 hover:bg-indigo-700 shadow-indigo-100"
+              "bg-[#4892CC] hover:bg-[#3C8B93] shadow-sky-100"
             )}
           >
             {isSubmitting ? (

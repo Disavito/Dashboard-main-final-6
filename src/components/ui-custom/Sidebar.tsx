@@ -51,7 +51,7 @@ const Sidebar: React.FC = () => {
     <aside className="w-64 bg-surface border-r border-border p-6 flex flex-col shadow-lg">
       <div className="mb-8 text-center">
         <h2 className="text-3xl font-extrabold text-primary tracking-tight">
-          Financiero<span className="text-accent">.</span>
+          <span className="text-primary">FIMA</span>GADI
         </h2>
         <p className="text-textSecondary text-sm mt-1">Gestión Integral</p>
       </div>
@@ -77,7 +77,7 @@ const Sidebar: React.FC = () => {
         </ul>
       </nav>
       <div className="mt-auto pt-6 border-t border-border/50 text-center text-textSecondary text-sm">
-        <p>&copy; 2025 Bolt. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Corporación FIMAGADI.</p>
       </div>
     </aside>
   );

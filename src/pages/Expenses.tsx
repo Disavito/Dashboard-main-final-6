@@ -231,7 +231,7 @@ export default function Expenses() {
       cell: ({ row }) => (
         <div className="flex flex-col">
           <span className="text-[10px] font-bold uppercase text-slate-400">{row.getValue('category')}</span>
-          <span className="text-xs font-semibold text-indigo-600">{row.original.sub_category || '-'}</span>
+          <span className="text-xs font-semibold text-corp-blue">{row.original.sub_category || '-'}</span>
         </div>
       ),
     },
@@ -251,7 +251,7 @@ export default function Expenses() {
           <Button 
             variant="ghost" 
             size="icon" 
-            className="h-8 w-8 text-pink-400 hover:text-pink-600 hover:bg-pink-50"
+            className="h-8 w-8 text-corp-teal hover:text-corp-dark hover:bg-corp-teal/10"
             onClick={() => handleOpenDialog(row.original)}
           >
             <Edit className="h-4 w-4" />
@@ -270,7 +270,7 @@ export default function Expenses() {
   ];
 
   return (
-    <div className="space-y-8 p-4 md:p-8 bg-[#F8F9FC] min-h-screen">
+    <div className="space-y-8 p-4 md:p-8 bg-[#FFFFFF] min-h-screen">
       <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 max-w-7xl mx-auto">
         <div>
           <h1 className="text-3xl font-black text-slate-900 tracking-tight uppercase">Gastos</h1>
@@ -278,7 +278,7 @@ export default function Expenses() {
         </div>
         <Button 
           onClick={() => handleOpenDialog()} 
-          className="bg-[#9E7FFF] hover:bg-[#8B66FF] text-white h-12 px-6 rounded-xl font-bold shadow-lg shadow-indigo-100 transition-all active:scale-95 flex items-center gap-2"
+          className="bg-[#4892CC] hover:bg-[#3C8B93] text-white h-12 px-6 rounded-xl font-bold shadow-lg shadow-sky-100 transition-all active:scale-95 flex items-center gap-2"
         >
           <PlusCircle className="h-5 w-5" /> Añadir Gasto
         </Button>
@@ -293,7 +293,7 @@ export default function Expenses() {
                 placeholder="Buscar gastos..."
                 value={globalFilter}
                 onChange={(e) => setGlobalFilter(e.target.value)}
-                className="pl-10 h-11 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-indigo-500/20"
+                className="pl-10 h-11 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-corp-blue/20"
               />
             </div>
             <Popover>
@@ -331,12 +331,12 @@ export default function Expenses() {
                 <Card key={expense.id} className="border-none shadow-md bg-white rounded-2xl overflow-hidden">
                   <div className="p-4 bg-slate-50/50 border-b border-slate-100 flex justify-between items-center">
                     <div className="flex items-center gap-2">
-                      <CalendarIcon className="h-4 w-4 text-indigo-500" />
+                      <CalendarIcon className="h-4 w-4 text-corp-blue" />
                       <span className="text-xs font-bold text-slate-600">
                         {format(parseISO(expense.date), 'dd/MM/yyyy')}
                       </span>
                     </div>
-                    <Badge variant="outline" className="bg-white font-mono text-indigo-600 border-indigo-100">
+                    <Badge variant="outline" className="bg-white font-mono text-corp-blue border-corp-blue/20">
                       <Hash className="h-3 w-3 mr-1" /> {expense.numero_gasto || 'N/A'}
                     </Badge>
                   </div>
@@ -350,11 +350,11 @@ export default function Expenses() {
                     </div>
 
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary" className="bg-indigo-50 text-indigo-600 border-none text-[10px] font-bold uppercase">
+                      <Badge variant="secondary" className="bg-corp-blue/10 text-corp-blue border-none text-[10px] font-bold uppercase">
                         <Tag className="h-3 w-3 mr-1" /> {expense.category}
                       </Badge>
                       {expense.sub_category && (
-                        <Badge variant="outline" className="border-indigo-100 text-indigo-500 text-[10px] font-bold uppercase">
+                        <Badge variant="outline" className="border-corp-blue/20 text-corp-blue text-[10px] font-bold uppercase">
                           {expense.sub_category}
                         </Badge>
                       )}
@@ -371,7 +371,7 @@ export default function Expenses() {
                         <Button 
                           variant="outline" 
                           size="icon"
-                          className="h-10 w-10 rounded-xl border-pink-100 text-pink-500 hover:bg-pink-50"
+                          className="h-10 w-10 rounded-xl border-corp-teal/20 text-corp-teal hover:bg-corp-teal/10"
                           onClick={() => handleOpenDialog(expense)}
                         >
                           <Edit className="h-4 w-4" />
@@ -432,7 +432,7 @@ export default function Expenses() {
                       <Popover>
                         <PopoverTrigger asChild>
                           <Button variant="outline" className="px-3 rounded-xl border-slate-200 h-11">
-                            <CalendarIcon className="h-4 w-4 text-indigo-500" />
+                            <CalendarIcon className="h-4 w-4 text-corp-blue" />
                           </Button>
                         </PopoverTrigger>
                         <PopoverContent className="w-auto p-0" align="end">
@@ -489,7 +489,7 @@ export default function Expenses() {
                     <FormItem className="animate-in fade-in slide-in-from-left-2 duration-300">
                       <FormLabel>Subcategoría</FormLabel>
                       <Select onValueChange={field.onChange} value={field.value || undefined}>
-                        <FormControl><SelectTrigger className="rounded-xl h-11 border-indigo-100 bg-indigo-50/30"><SelectValue placeholder="Seleccionar..." /></SelectTrigger></FormControl>
+                        <FormControl><SelectTrigger className="rounded-xl h-11 border-corp-blue/20 bg-corp-blue/10/30"><SelectValue placeholder="Seleccionar..." /></SelectTrigger></FormControl>
                         <SelectContent>
                           {(watchedCategory === 'Gasto Fijo' ? GASTOS_FIJOS_SUB_CATEGORIES : VIATICOS_SUB_CATEGORIES).map(s => (
                             <SelectItem key={s.value} value={s.label}>{s.label}</SelectItem>
@@ -512,7 +512,7 @@ export default function Expenses() {
 
               <DialogFooter className="pt-4">
                 <Button type="button" variant="outline" onClick={() => setIsDialogOpen(false)} className="rounded-xl h-11">Cancelar</Button>
-                <Button type="submit" className="bg-[#9E7FFF] hover:bg-[#8B66FF] rounded-xl h-11 px-8 font-bold">Guardar Gasto</Button>
+                <Button type="submit" className="bg-[#4892CC] hover:bg-[#3C8B93] rounded-xl h-11 px-8 font-bold">Guardar Gasto</Button>
               </DialogFooter>
             </form>
           </Form>

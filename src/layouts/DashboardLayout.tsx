@@ -52,15 +52,15 @@ function DashboardLayout() {
   ];
 
   const SidebarContent = () => (
-    <div className="flex flex-col h-full bg-[#FAFAFA] border-r border-[#E5E7EB]/60">
+    <div className="flex flex-col h-full bg-[#FFFFFF] border-r border-[#E5E7EB]/60">
       <div className="p-6 md:p-8">
         <Link to="/" className="flex items-center gap-3">
           <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-md shadow-primary/20">
             <Wallet className="text-white w-5 h-5" />
           </div>
           {!isCollapsed && (
-            <span className="text-xl md:text-2xl font-black tracking-tighter text-slate-800">
-              Fin<span className="text-primary">Dash</span>
+            <span className="text-lg md:text-xl font-black tracking-tighter text-[#373435]">
+              <span className="text-primary">FIMA</span>GADI
             </span>
           )}
         </Link>
@@ -109,7 +109,7 @@ function DashboardLayout() {
   );
 
   return (
-    <div className="flex h-screen bg-[#F8FAFC] overflow-hidden font-sans">
+    <div className="flex h-screen bg-[#FFFFFF] overflow-hidden font-sans">
       <aside className={cn(
         "hidden lg:block transition-all duration-300 ease-in-out relative z-40",
         isCollapsed ? "w-20" : "w-[280px]"

@@ -295,9 +295,9 @@ function PartnerDocuments() {
       >
         {title}
         {isSorted === "asc" ? (
-          <ArrowUp className="ml-2 h-4 w-4 text-[#9E7FFF]" />
+          <ArrowUp className="ml-2 h-4 w-4 text-[#4892CC]" />
         ) : isSorted === "desc" ? (
-          <ArrowDown className="ml-2 h-4 w-4 text-[#9E7FFF]" />
+          <ArrowDown className="ml-2 h-4 w-4 text-[#4892CC]" />
         ) : (
           <ArrowUpDown className="ml-2 h-4 w-4 text-gray-300" />
         )}
@@ -362,7 +362,7 @@ function PartnerDocuments() {
             checked={row.original.is_lote_medido ?? false}
             onCheckedChange={(v) => handleUpdateLoteMedido(row.original.id, !!v, row.original)}
             disabled={!canManageEngineering}
-            className="w-5 h-5 rounded-md data-[state=checked]:bg-[#9E7FFF] data-[state=checked]:border-[#9E7FFF]"
+            className="w-5 h-5 rounded-md data-[state=checked]:bg-[#4892CC] data-[state=checked]:border-[#4892CC]"
           />
           <span className={cn(
             "text-[10px] font-bold uppercase px-2 py-0.5 rounded-full",
@@ -438,7 +438,7 @@ function PartnerDocuments() {
                 key={t} 
                 variant="outline" 
                 size="sm" 
-                className="h-7 px-2 text-[9px] font-bold border-[#9E7FFF]/20 text-[#9E7FFF] hover:bg-[#F0EEFF]"
+                className="h-7 px-2 text-[9px] font-bold border-[#4892CC]/20 text-[#4892CC] hover:bg-[#E8F1F8]"
                 onClick={() => setModalState({ 
                   isOpen: true, 
                   socioId: row.original.id, 
@@ -456,7 +456,7 @@ function PartnerDocuments() {
   ], [isAdmin, isEngineer, canManageEngineering, handleUpdateLoteMedido, requiredDocumentTypes]);
 
   if (loading || userLoading) return (
-    <div className="min-h-screen bg-[#F8F9FC] pb-20">
+    <div className="min-h-screen bg-[#FFFFFF] pb-20">
       <header className="relative h-64 md:h-80 flex items-center overflow-hidden bg-white border-b border-gray-100">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl">
@@ -494,20 +494,20 @@ function PartnerDocuments() {
   );
 
   return (
-    <div className="min-h-screen bg-[#F8F9FC] pb-20">
+    <div className="min-h-screen bg-[#FFFFFF] pb-20">
       <header className="relative h-64 md:h-80 flex items-center overflow-hidden bg-white border-b border-gray-100">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#9E7FFF]/10 to-transparent z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#4892CC]/10 to-transparent z-0"></div>
         <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
-          <LayoutGrid className="w-full h-full text-[#9E7FFF]" />
+          <LayoutGrid className="w-full h-full text-[#4892CC]" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl">
-            <Badge className="mb-4 bg-[#F0EEFF] text-[#9E7FFF] border-none font-bold px-4 py-1 rounded-full">
+            <Badge className="mb-4 bg-[#E8F1F8] text-[#4892CC] border-none font-bold px-4 py-1 rounded-full">
               MÓDULO DE INGENIERÍA v2.0
             </Badge>
             <h1 className="text-5xl md:text-6xl font-black text-gray-900 tracking-tighter mb-4">
-              Expedientes <span className="text-[#9E7FFF]">Digitales</span>
+              Expedientes <span className="text-[#4892CC]">Digitales</span>
             </h1>
             <p className="text-lg text-gray-500 font-medium leading-relaxed">
               Gestión centralizada de planimetría, memorias descriptivas y control de medición de lotes.
@@ -523,7 +523,7 @@ function PartnerDocuments() {
             <SearchInputWithDebounce
               placeholder="Buscar por socio, DNI, manzana, lote o recibo..."
               onDebouncedChange={setDebouncedSearchQuery}
-              inputClassName="pl-12 h-14 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#9E7FFF]/20 text-gray-700 font-bold"
+              inputClassName="pl-12 h-14 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#4892CC]/20 text-gray-700 font-bold"
             />
           </div>
           
@@ -531,7 +531,7 @@ function PartnerDocuments() {
             <Select value={selectedLocalidad} onValueChange={setSelectedLocalidad}>
               <SelectTrigger className="h-14 w-full md:w-[240px] bg-gray-50 border-none rounded-2xl font-bold text-gray-600">
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#9E7FFF]" />
+                  <MapPin className="w-4 h-4 text-[#4892CC]" />
                   <SelectValue placeholder="Localidad" />
                 </div>
               </SelectTrigger>
@@ -546,7 +546,7 @@ function PartnerDocuments() {
             {canManageEngineering && Object.keys(rowSelection).length > 0 && (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button className="h-14 px-6 bg-[#9E7FFF] hover:bg-[#8B6EEF] rounded-2xl font-bold shadow-lg shadow-[#9E7FFF]/20">
+                  <Button className="h-14 px-6 bg-[#4892CC] hover:bg-[#3C8B93] rounded-2xl font-bold shadow-lg shadow-[#4892CC]/20">
                     Acciones ({Object.keys(rowSelection).length})
                   </Button>
                 </DropdownMenuTrigger>
@@ -573,7 +573,7 @@ function PartnerDocuments() {
           <TabsList className="grid w-full grid-cols-2 bg-gray-100/50 p-1 rounded-2xl mb-6">
             <TabsTrigger 
               value="documents" 
-              className="rounded-xl data-[state=active]:bg-[#9E7FFF] data-[state=active]:text-white data-[state=active]:shadow-md data-[state=active]:font-bold"
+              className="rounded-xl data-[state=active]:bg-[#4892CC] data-[state=active]:text-white data-[state=active]:shadow-md data-[state=active]:font-bold"
             >
               Expedientes Digitales
             </TabsTrigger>

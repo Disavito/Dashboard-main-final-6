@@ -104,7 +104,7 @@ const AdminJornadaView: React.FC = () => {
             <label className="text-[10px] font-black uppercase text-gray-400 tracking-widest ml-1">Colaborador</label>
             <Select value={selectedColaboradorId} onValueChange={setSelectedColaboradorId} disabled={isLoadingColaboradores}>
               <SelectTrigger className="h-12 rounded-xl border-gray-100 bg-gray-50 font-bold">
-                <Users className="mr-2 h-4 w-4 text-[#9E7FFF]" />
+                <Users className="mr-2 h-4 w-4 text-[#4892CC]" />
                 <SelectValue placeholder="Seleccionar colaborador" />
               </SelectTrigger>
               <SelectContent className="rounded-xl">
@@ -121,7 +121,7 @@ const AdminJornadaView: React.FC = () => {
             <Popover>
               <PopoverTrigger asChild>
                 <Button variant={"outline"} className={cn("w-full h-12 justify-start text-left font-bold rounded-xl border-gray-100 bg-gray-50")}>
-                  <CalendarIcon className="mr-2 h-4 w-4 text-[#9E7FFF]" />
+                  <CalendarIcon className="mr-2 h-4 w-4 text-[#4892CC]" />
                   <span>{renderDateRange()}</span>
                 </Button>
               </PopoverTrigger>
@@ -214,12 +214,12 @@ const AdminJornadaView: React.FC = () => {
                       </TableCell>
 
                       <TableCell className="text-right">
-                        <span className="font-mono font-black text-[#9E7FFF] bg-[#9E7FFF]/5 px-2 py-1 rounded-lg text-xs">
+                        <span className="font-mono font-black text-[#4892CC] bg-[#4892CC]/5 px-2 py-1 rounded-lg text-xs">
                           {formatMinutesToHours(calculateWorkedMinutesForJornada(jornada))}
                         </span>
                       </TableCell>
                       <TableCell className="text-right">
-                        <Button variant="ghost" size="icon" onClick={() => handleEditClick(jornada)} className="rounded-xl hover:bg-[#9E7FFF]/10 hover:text-[#9E7FFF]">
+                        <Button variant="ghost" size="icon" onClick={() => handleEditClick(jornada)} className="rounded-xl hover:bg-[#4892CC]/10 hover:text-[#4892CC]">
                           <Pencil className="h-4 w-4" />
                         </Button>
                       </TableCell>

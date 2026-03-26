@@ -202,12 +202,12 @@ export default function RecibosPage() {
     <div className="max-w-4xl mx-auto pb-20">
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-4">
-          <div className="p-3 bg-[#9E7FFF]/10 rounded-2xl">
-            <Wallet className="h-7 w-7 text-[#9E7FFF]" />
+          <div className="p-3 bg-[#4892CC]/10 rounded-2xl">
+            <Wallet className="h-7 w-7 text-[#4892CC]" />
           </div>
           <div>
             <h1 className="text-3xl font-black text-gray-900 tracking-tight">
-              Emitir Recibo {nextReceiptNumber && <span className="text-[#9E7FFF] text-2xl">({nextReceiptNumber})</span>}
+              Emitir Recibo {nextReceiptNumber && <span className="text-[#4892CC] text-2xl">({nextReceiptNumber})</span>}
             </h1>
             <p className="text-sm text-gray-500 font-medium">Vinculación automática con Socio Documentos.</p>
           </div>
@@ -218,7 +218,7 @@ export default function RecibosPage() {
           size="sm" 
           onClick={() => loadCorrelative(false)}
           disabled={isSyncing}
-          className="rounded-xl gap-2 border-[#9E7FFF]/20 hover:bg-[#9E7FFF]/5"
+          className="rounded-xl gap-2 border-[#4892CC]/20 hover:bg-[#4892CC]/5"
         >
           {isSyncing ? <Loader2 className="h-4 w-4 animate-spin" /> : <RefreshCw className="h-4 w-4" />}
           Sincronizar Correlativo
@@ -303,7 +303,7 @@ export default function RecibosPage() {
                           step="0.01" 
                           {...field} 
                           onChange={e => field.onChange(parseFloat(e.target.value))} 
-                          className="h-14 bg-gray-50 border-none rounded-2xl font-black text-2xl text-[#9E7FFF]" 
+                          className="h-14 bg-gray-50 border-none rounded-2xl font-black text-2xl text-[#4892CC]" 
                         />
                       </FormControl>
                       <FormMessage />
@@ -353,7 +353,7 @@ export default function RecibosPage() {
                   <FormItem className="animate-in fade-in slide-in-from-top-2">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400">N° de Operación Bancaria</label>
                     <FormControl>
-                      <Input {...field} className="h-14 bg-[#F0EEFF] border-none rounded-2xl font-mono font-bold text-[#9E7FFF]" />
+                      <Input {...field} className="h-14 bg-[#E8F1F8] border-none rounded-2xl font-mono font-bold text-[#4892CC]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -410,7 +410,7 @@ export default function RecibosPage() {
 
             <Button 
               type="submit" 
-              className="w-full h-16 gap-3 rounded-2xl bg-[#9E7FFF] hover:bg-[#8B6EEF] text-white text-lg font-black shadow-glass transition-all active:scale-[0.98]" 
+              className="w-full h-16 gap-3 rounded-2xl bg-[#4892CC] hover:bg-[#3C8B93] text-white text-lg font-black shadow-glass transition-all active:scale-[0.98]" 
               disabled={isSubmitting || !clientData}
             >
               {isSubmitting ? (

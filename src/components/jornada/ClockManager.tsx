@@ -149,7 +149,7 @@ const ClockManager: React.FC<ClockManagerProps> = ({
       "max-w-md mx-auto bg-white rounded-2xl shadow-premium overflow-hidden border",
       bypassTimeRestrictions ? "border-amber-200 ring-4 ring-amber-50" : "border-gray-100"
     )}>
-      <div className={cn("p-8 pb-12 text-white relative", bypassTimeRestrictions ? "bg-amber-500" : "bg-[#9E7FFF]")}>
+      <div className={cn("p-8 pb-12 text-white relative", bypassTimeRestrictions ? "bg-amber-500" : "bg-[#4892CC]")}>
         <div className="relative z-10">
           <div className="flex justify-between items-start">
             <div>
@@ -258,7 +258,7 @@ const ClockManager: React.FC<ClockManagerProps> = ({
               disabled={mutation.isPending}
               className={cn(
                 "w-full h-16 text-white rounded-2xl text-lg font-bold shadow-premium transition-all active:scale-95",
-                bypassTimeRestrictions ? "bg-amber-600 hover:bg-amber-700 shadow-amber-100" : "bg-[#9E7FFF] hover:bg-[#8B6EEF] shadow-purple-100"
+                bypassTimeRestrictions ? "bg-amber-600 hover:bg-amber-700 shadow-amber-100" : "bg-[#4892CC] hover:bg-[#3C8B93] shadow-sky-100"
               )}
             >
               <Play className="mr-2 h-5 w-5 fill-current" /> Iniciar Jornada

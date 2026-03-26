@@ -205,7 +205,7 @@ function Income() {
           <Button 
             variant="ghost" 
             size="icon" 
-            className="h-8 w-8 text-pink-400 hover:text-pink-600 hover:bg-pink-50 transition-colors"
+            className="h-8 w-8 text-corp-teal hover:text-corp-dark hover:bg-corp-teal/10 transition-colors"
             onClick={() => handleEdit(row.original)}
           >
             <Edit className="h-4 w-4" />
@@ -227,7 +227,7 @@ function Income() {
     return (
       <div className="flex h-screen items-center justify-center bg-slate-50">
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="animate-spin h-12 w-12 text-indigo-600" />
+          <Loader2 className="animate-spin h-12 w-12 text-corp-blue" />
           <p className="text-slate-500 font-medium animate-pulse">Cargando registros...</p>
         </div>
       </div>
@@ -235,7 +235,7 @@ function Income() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8F9FC] p-4 md:p-8">
+    <div className="min-h-screen bg-[#FFFFFF] p-4 md:p-8">
       <div className="max-w-7xl mx-auto space-y-6">
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
@@ -244,7 +244,7 @@ function Income() {
           </div>
           <Button 
             onClick={handleNew}
-            className="bg-[#9E7FFF] hover:bg-[#8B66FF] text-white h-12 px-6 rounded-xl font-bold shadow-lg shadow-indigo-100 transition-all active:scale-95 flex items-center gap-2"
+            className="bg-[#4892CC] hover:bg-[#3C8B93] text-white h-12 px-6 rounded-xl font-bold shadow-lg shadow-sky-100 transition-all active:scale-95 flex items-center gap-2"
           >
             <PlusCircle className="h-5 w-5" /> Nuevo Registro
           </Button>
@@ -259,7 +259,7 @@ function Income() {
                   placeholder="Busca por nombre, DNI, recibo u operación..."
                   value={searchInput}
                   onChange={(e) => setSearchInput(e.target.value)}
-                  className="pl-12 h-14 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500/20 text-slate-700 font-medium placeholder:text-slate-400"
+                  className="pl-12 h-14 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-corp-blue/20 text-slate-700 font-medium placeholder:text-slate-400"
                 />
                 {searchInput && (
                   <button 
@@ -272,7 +272,7 @@ function Income() {
               </div>
               
               <Select value={selectedLocalidadFilter} onValueChange={setSelectedLocalidadFilter}>
-                <SelectTrigger className="w-full lg:w-[280px] h-14 bg-slate-50 border-none rounded-2xl font-semibold text-slate-700 focus:ring-2 focus:ring-indigo-500/20">
+                <SelectTrigger className="w-full lg:w-[280px] h-14 bg-slate-50 border-none rounded-2xl font-semibold text-slate-700 focus:ring-2 focus:ring-corp-blue/20">
                   <SelectValue placeholder="Todas las Comunidades" />
                 </SelectTrigger>
                 <SelectContent className="rounded-xl border-slate-100 shadow-premium">
@@ -307,7 +307,7 @@ function Income() {
                       isObserved ? "bg-amber-50" : "bg-slate-50/50"
                     )}>
                       <div className="flex items-center gap-2">
-                        <Calendar className="h-4 w-4 text-indigo-500" />
+                        <Calendar className="h-4 w-4 text-corp-blue" />
                         <span className="text-xs font-bold text-slate-600">
                           {isValid(incomeDate) ? format(incomeDate, 'dd/MM/yyyy') : 'Fecha inválida'}
                         </span>
@@ -318,7 +318,7 @@ function Income() {
                             Socio Observado
                           </Badge>
                         )}
-                        <Badge variant="outline" className="bg-white font-mono text-indigo-600 border-indigo-100">
+                        <Badge variant="outline" className="bg-white font-mono text-corp-blue border-corp-blue/20">
                           <Hash className="h-3 w-3 mr-1" /> {income.receipt_number}
                         </Badge>
                       </div>
@@ -368,7 +368,7 @@ function Income() {
                       <div className="pt-4 flex gap-2 border-t border-slate-50">
                         <Button 
                           variant="outline" 
-                          className="flex-1 h-10 rounded-xl border-pink-100 text-pink-500 hover:bg-pink-50 hover:text-pink-600 font-bold text-xs"
+                          className="flex-1 h-10 rounded-xl border-corp-teal/20 text-corp-teal hover:bg-corp-teal/10 hover:text-corp-dark font-bold text-xs"
                           onClick={() => handleEdit(income)}
                         >
                           <Edit className="h-3.5 w-3.5 mr-2" /> Editar

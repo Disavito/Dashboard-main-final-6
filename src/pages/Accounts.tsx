@@ -170,24 +170,24 @@ const Accounts: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#F8F9FC] flex flex-col items-center justify-center">
-        <Loader2 className="h-12 w-12 animate-spin text-[#9E7FFF]" />
+      <div className="min-h-screen bg-[#FFFFFF] flex flex-col items-center justify-center">
+        <Loader2 className="h-12 w-12 animate-spin text-[#4892CC]" />
         <p className="text-slate-500 mt-4 font-medium">Sincronizando estados financieros...</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#F8F9FC] text-slate-900 p-4 md:p-8 space-y-8">
+    <div className="min-h-screen bg-[#FFFFFF] text-slate-900 p-4 md:p-8 space-y-8">
       {/* Header Profesional */}
       <header className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 max-w-7xl mx-auto">
         <div className="space-y-1">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-[#9E7FFF] rounded-2xl shadow-lg shadow-[#9E7FFF]/20">
+            <div className="p-3 bg-[#4892CC] rounded-2xl shadow-lg shadow-[#4892CC]/20">
               <Wallet className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-3xl font-black tracking-tight text-slate-900 uppercase">Cuentas & <span className="text-[#9E7FFF]">Tesorería</span></h1>
+              <h1 className="text-3xl font-black tracking-tight text-slate-900 uppercase">Cuentas & <span className="text-[#4892CC]">Tesorería</span></h1>
               <p className="text-slate-500 font-medium">Control centralizado de activos y flujos de caja</p>
             </div>
           </div>
@@ -211,7 +211,7 @@ const Accounts: React.FC = () => {
 
           <Dialog open={isTransactionDialogOpen} onOpenChange={setIsTransactionDialogOpen}>
             <DialogTrigger asChild>
-              <Button className="bg-[#9E7FFF] hover:bg-[#8B6EEF] text-white font-bold rounded-xl px-6 h-12 shadow-lg shadow-[#9E7FFF]/20 transition-all active:scale-95">
+              <Button className="bg-[#4892CC] hover:bg-[#3C8B93] text-white font-bold rounded-xl px-6 h-12 shadow-lg shadow-[#4892CC]/20 transition-all active:scale-95">
                 <PlusCircle className="w-5 h-5 mr-2" /> Nuevo Movimiento
               </Button>
             </DialogTrigger>
@@ -252,13 +252,13 @@ const Accounts: React.FC = () => {
           <Card className="bg-white border border-gray-100 shadow-sm rounded-2xl">
             <CardHeader className="pb-2">
               <CardDescription className="text-slate-400 font-bold uppercase tracking-widest text-[10px]">Ingresos Totales</CardDescription>
-              <CardTitle className="text-4xl font-black text-[#9E7FFF]">
+              <CardTitle className="text-4xl font-black text-[#4892CC]">
                 {formatCurrency(stats.income)}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex items-center gap-2 text-slate-400 text-sm font-medium">
-                <ArrowUpCircle className="w-4 h-4 text-[#9E7FFF]" />
+                <ArrowUpCircle className="w-4 h-4 text-[#4892CC]" />
                 <span>Flujo de entrada acumulado</span>
               </div>
             </CardContent>
@@ -267,13 +267,13 @@ const Accounts: React.FC = () => {
           <Card className="bg-white border border-gray-100 shadow-sm rounded-2xl">
             <CardHeader className="pb-2">
               <CardDescription className="text-slate-400 font-bold uppercase tracking-widest text-[10px]">Gastos & Egresos</CardDescription>
-              <CardTitle className="text-4xl font-black text-pink-500">
+              <CardTitle className="text-4xl font-black text-corp-teal">
                 {formatCurrency(stats.expenses)}
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex items-center gap-2 text-slate-400 text-sm font-medium">
-                <ArrowDownCircle className="w-4 h-4 text-pink-500" />
+                <ArrowDownCircle className="w-4 h-4 text-corp-teal" />
                 <span>Salidas de caja registradas</span>
               </div>
             </CardContent>
@@ -305,12 +305,12 @@ const Accounts: React.FC = () => {
                 <AreaChart data={chartData}>
                   <defs>
                     <linearGradient id="colorInc" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#9E7FFF" stopOpacity={0.2}/>
-                      <stop offset="95%" stopColor="#9E7FFF" stopOpacity={0}/>
+                      <stop offset="5%" stopColor="#4892CC" stopOpacity={0.2}/>
+                      <stop offset="95%" stopColor="#4892CC" stopOpacity={0}/>
                     </linearGradient>
                     <linearGradient id="colorExp" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#f472b6" stopOpacity={0.2}/>
-                      <stop offset="95%" stopColor="#f472b6" stopOpacity={0}/>
+                      <stop offset="5%" stopColor="#3C9384" stopOpacity={0.2}/>
+                      <stop offset="95%" stopColor="#3C9384" stopOpacity={0}/>
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
@@ -337,7 +337,7 @@ const Accounts: React.FC = () => {
                     name="Ingresos"
                     type="monotone" 
                     dataKey="ingresos" 
-                    stroke="#9E7FFF" 
+                    stroke="#4892CC" 
                     strokeWidth={3}
                     fillOpacity={1} 
                     fill="url(#colorInc)" 
@@ -346,7 +346,7 @@ const Accounts: React.FC = () => {
                     name="Gastos"
                     type="monotone" 
                     dataKey="gastos" 
-                    stroke="#f472b6" 
+                    stroke="#3C9384" 
                     strokeWidth={3}
                     fillOpacity={1} 
                     fill="url(#colorExp)" 
@@ -359,7 +359,7 @@ const Accounts: React.FC = () => {
           {/* Accounts List & Distribution */}
           <div className="space-y-6">
             <h3 className="text-xl font-black px-2 flex items-center gap-2 text-slate-900 uppercase tracking-tight">
-              <BarChart3 className="w-5 h-5 text-[#9E7FFF]" />
+              <BarChart3 className="w-5 h-5 text-[#4892CC]" />
               Estado de Cuentas
             </h3>
             <div className="grid gap-4">
@@ -376,15 +376,15 @@ const Accounts: React.FC = () => {
                 const percentage = stats.balance > 0 ? (balance / stats.balance) * 100 : 0;
 
                 return (
-                  <Card key={account.id} className="bg-white border border-gray-100 shadow-sm rounded-2xl hover:ring-2 hover:ring-[#9E7FFF]/20 transition-all cursor-pointer overflow-hidden group">
+                  <Card key={account.id} className="bg-white border border-gray-100 shadow-sm rounded-2xl hover:ring-2 hover:ring-[#4892CC]/20 transition-all cursor-pointer overflow-hidden group">
                     <div className="p-5">
                       <div className="flex justify-between items-start mb-4">
                         <div>
-                          <h4 className="font-bold text-slate-900 group-hover:text-[#9E7FFF] transition-colors">{account.name}</h4>
+                          <h4 className="font-bold text-slate-900 group-hover:text-[#4892CC] transition-colors">{account.name}</h4>
                           <Badge variant="secondary" className="text-[10px] bg-slate-100 text-slate-500 border-none uppercase font-bold">{account.tipo}</Badge>
                         </div>
                         <div className="text-right">
-                          <p className={cn("text-lg font-black", balance >= 0 ? "text-emerald-600" : "text-pink-500")}>
+                          <p className={cn("text-lg font-black", balance >= 0 ? "text-emerald-600" : "text-corp-teal")}>
                             {formatCurrency(balance)}
                           </p>
                           <p className="text-[10px] text-slate-400 font-bold uppercase">Saldo Actual</p>
@@ -398,7 +398,7 @@ const Accounts: React.FC = () => {
                         </div>
                         <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
                           <div 
-                            className="bg-[#9E7FFF] h-full rounded-full transition-all duration-1000" 
+                            className="bg-[#4892CC] h-full rounded-full transition-all duration-1000" 
                             style={{ width: `${Math.max(0, Math.min(percentage, 100))}%` }}
                           />
                         </div>
@@ -408,7 +408,7 @@ const Accounts: React.FC = () => {
                 );
               })}
               
-              <Button variant="outline" className="w-full border-dashed border-2 border-slate-200 text-slate-400 hover:text-[#9E7FFF] hover:border-[#9E7FFF] hover:bg-[#9E7FFF]/5 rounded-2xl h-14 font-bold transition-all">
+              <Button variant="outline" className="w-full border-dashed border-2 border-slate-200 text-slate-400 hover:text-[#4892CC] hover:border-[#4892CC] hover:bg-[#4892CC]/5 rounded-2xl h-14 font-bold transition-all">
                 <ArrowRightLeft className="w-4 h-4 mr-2" /> Transferir entre Cuentas
               </Button>
             </div>
@@ -459,7 +459,7 @@ const Accounts: React.FC = () => {
                     </td>
                     <td className="px-8 py-5">
                       <div className="flex flex-col">
-                        <span className="text-sm font-bold text-slate-900 group-hover:text-[#9E7FFF] transition-colors uppercase">
+                        <span className="text-sm font-bold text-slate-900 group-hover:text-[#4892CC] transition-colors uppercase">
                           {t.description}
                         </span>
                         <span className="text-[10px] font-mono text-slate-400 font-bold">{t.ref || 'S/N'}</span>
@@ -481,7 +481,7 @@ const Accounts: React.FC = () => {
                     <td className="px-8 py-5 text-right">
                       <span className={cn(
                         "text-sm font-black",
-                        t.amount >= 0 ? "text-emerald-600" : "text-pink-500"
+                        t.amount >= 0 ? "text-emerald-600" : "text-corp-teal"
                       )}>
                         {t.amount >= 0 ? '+' : ''}{formatCurrency(t.amount)}
                       </span>

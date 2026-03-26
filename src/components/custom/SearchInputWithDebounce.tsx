@@ -45,7 +45,7 @@ const SearchInputWithDebounce = React.memo(
           value={inputValue}
           onChange={handleChange}
           className={cn(
-            "pl-12 h-14 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#9E7FFF]/20 text-gray-700 font-medium",
+            "pl-12 h-14 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#4892CC]/20 text-gray-700 font-medium",
             inputClassName
           )}
         />

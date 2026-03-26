@@ -316,7 +316,7 @@ function People() {
   }, [table, mobileVisibleCount]);
 
   if (loading || userLoading) return (
-    <div className="min-h-screen bg-[#F8F9FC] pb-10">
+    <div className="min-h-screen bg-[#FFFFFF] pb-10">
       <div className="w-full bg-white border-b border-gray-100 py-12 px-8 shadow-sm mb-8">
         <div className="max-w-7xl mx-auto">
           <div className="h-8 w-64 bg-slate-200 rounded-xl animate-pulse mb-3" />
@@ -347,16 +347,16 @@ function People() {
   );
 
   return (
-    <div className="min-h-screen bg-[#F8F9FC] pb-10">
+    <div className="min-h-screen bg-[#FFFFFF] pb-10">
       <div className="w-full bg-white border-b border-gray-100 py-12 px-8 shadow-sm mb-8 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#9E7FFF]/5 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#4892CC]/5 rounded-full blur-3xl -mr-20 -mt-20"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
               <h1 className="text-4xl font-black text-gray-900 tracking-tight">Gestión de Socios</h1>
               <p className="text-gray-500 font-medium mt-1">Control de estados basado en el movimiento más reciente.</p>
             </div>
-            <Button className="h-12 bg-[#9E7FFF] hover:bg-[#8B6EEF] text-white gap-2 rounded-2xl font-bold shadow-lg shadow-[#9E7FFF]/20 px-6" onClick={() => setIsRegistrationDialogOpen(true)}>
+            <Button className="h-12 bg-[#4892CC] hover:bg-[#3C8B93] text-white gap-2 rounded-2xl font-bold shadow-lg shadow-[#4892CC]/20 px-6" onClick={() => setIsRegistrationDialogOpen(true)}>
               <PlusCircle className="h-5 h-5" /> Registrar Nuevo Socio
             </Button>
           </div>
@@ -370,7 +370,7 @@ function People() {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
             <Input 
               placeholder="Buscar por DNI, nombre o recibo..." 
-              className="pl-11 bg-gray-50 border-none focus:ring-2 focus:ring-[#9E7FFF]/20 h-12 rounded-xl font-medium" 
+              className="pl-11 bg-gray-50 border-none focus:ring-2 focus:ring-[#4892CC]/20 h-12 rounded-xl font-medium" 
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
             />
@@ -430,7 +430,7 @@ function People() {
               <TableBody>
                 {table.getRowModel().rows?.length ? (
                   table.getRowModel().rows.map((row) => (
-                    <TableRow key={row.id} className="border-b border-gray-50 hover:bg-[#F0EEFF]/30 transition-colors group">
+                    <TableRow key={row.id} className="border-b border-gray-50 hover:bg-[#E8F1F8]/30 transition-colors group">
                       {row.getVisibleCells().map((cell) => (
                         <TableCell key={cell.id} className="py-4 px-6">
                           {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -450,13 +450,13 @@ function People() {
           <div className="flex items-center justify-between px-4 py-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
             <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">
               Mostrando {table.getRowModel().rows.length} de {filteredData.length} registros
-              <span className="ml-2 text-[#9E7FFF]">Página {table.getState().pagination.pageIndex + 1} de {table.getPageCount()}</span>
+              <span className="ml-2 text-[#4892CC]">Página {table.getState().pagination.pageIndex + 1} de {table.getPageCount()}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Button variant="outline" size="sm" onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()} className="h-11 px-6 rounded-xl font-bold border-gray-200 hover:bg-[#F0EEFF] hover:text-[#9E7FFF] transition-all">
+              <Button variant="outline" size="sm" onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()} className="h-11 px-6 rounded-xl font-bold border-gray-200 hover:bg-[#E8F1F8] hover:text-[#4892CC] transition-all">
                 <ChevronLeft className="h-4 w-4 mr-1" /> Anterior
               </Button>
-              <Button variant="outline" size="sm" onClick={() => table.nextPage()} disabled={!table.getCanNextPage()} className="h-11 px-6 rounded-xl font-bold border-gray-200 hover:bg-[#F0EEFF] hover:text-[#9E7FFF] transition-all">
+              <Button variant="outline" size="sm" onClick={() => table.nextPage()} disabled={!table.getCanNextPage()} className="h-11 px-6 rounded-xl font-bold border-gray-200 hover:bg-[#E8F1F8] hover:text-[#4892CC] transition-all">
                 Siguiente <ChevronRight className="h-4 w-4 ml-1" />
               </Button>
             </div>
@@ -514,7 +514,7 @@ function People() {
               <div ref={observerTarget} className="py-8 flex justify-center">
                 {mobileVisibleCount < filteredData.length ? (
                   <div className="flex flex-col items-center gap-2">
-                    <Loader2 className="h-6 w-6 animate-spin text-[#9E7FFF]" />
+                    <Loader2 className="h-6 w-6 animate-spin text-[#4892CC]" />
                     <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Cargando más socios...</span>
                   </div>
                 ) : (

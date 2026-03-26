@@ -20,7 +20,7 @@ const Loader: React.FC = () => {
         height: '48px',
         borderRadius: '50%',
         display: 'inline-block',
-        borderTop: '3px solid #9E7FFF',
+        borderTop: '3px solid #4892CC',
         borderRight: '3px solid transparent',
         boxSizing: 'border-box',
         animation: 'rotation 1s linear infinite',

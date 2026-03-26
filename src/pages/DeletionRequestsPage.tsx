@@ -10,14 +10,14 @@ const DeletionRequestsPage: React.FC = () => {
   if (userLoading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-white">
-        <Loader2 className="h-12 w-12 animate-spin text-[#9E7FFF]" />
+        <Loader2 className="h-12 w-12 animate-spin text-[#4892CC]" />
         <p className="mt-4 text-gray-400 font-medium">Cargando permisos...</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#F8F9FC] pb-20">
+    <div className="min-h-screen bg-[#FFFFFF] pb-20">
       <header className="relative h-64 md:h-80 flex items-center overflow-hidden bg-white border-b border-gray-100">
         <div className="absolute inset-0 bg-gradient-to-r from-[#ef4444]/10 to-transparent z-0"></div>
         <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">

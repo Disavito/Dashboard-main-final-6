@@ -5,8 +5,8 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 
 // Componente de carga ultra ligero
 const LoadingFallback = () => (
-  <div className="flex h-screen w-full items-center justify-center bg-[#F8F9FC]">
-    <Loader2 className="h-10 w-10 animate-spin text-[#9E7FFF]" />
+  <div className="flex h-screen w-full items-center justify-center bg-[#FFFFFF]">
+    <Loader2 className="h-10 w-10 animate-spin text-[#4892CC]" />
   </div>
 );
 

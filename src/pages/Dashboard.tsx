@@ -143,25 +143,25 @@ function Dashboard() {
 
   if (authLoading) {
     return (
-      <div className="h-screen w-full flex flex-col items-center justify-center bg-[#F8F9FC]">
-        <Loader2 className="w-12 h-12 text-[#9E7FFF] animate-spin mb-4" />
+      <div className="h-screen w-full flex flex-col items-center justify-center bg-[#FFFFFF]">
+        <Loader2 className="w-12 h-12 text-[#4892CC] animate-spin mb-4" />
         <p className="text-gray-500 font-bold">Cargando panel...</p>
       </div>
     );
   }
 
   return (
-    <div className="pb-20 bg-[#F8F9FC] min-h-screen">
+    <div className="pb-20 bg-[#FFFFFF] min-h-screen">
       <header className="relative h-64 md:h-72 flex items-center overflow-hidden bg-white border-b border-gray-100">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#9E7FFF]/5 via-transparent to-transparent z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#4892CC]/5 via-transparent to-transparent z-0"></div>
         <div className="container mx-auto px-8 relative z-10">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
-              <Badge className="mb-3 bg-[#9E7FFF]/10 text-[#9E7FFF] border-none font-bold px-4 py-1 rounded-full">
+              <Badge className="mb-3 bg-[#4892CC]/10 text-[#4892CC] border-none font-bold px-4 py-1 rounded-full">
                 SISTEMA DE GESTIÓN V2025
               </Badge>
               <h1 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
-                Panel de <span className="text-[#9E7FFF]">Administración</span>
+                Panel de <span className="text-[#4892CC]">Administración</span>
               </h1>
               <p className="text-gray-500 font-medium mt-2">
                 {isAdminOrFinanzas
@@ -187,10 +187,10 @@ function Dashboard() {
           {isAdminOrFinanzas && (
             <div className="flex justify-center">
               <TabsList className="bg-white/80 backdrop-blur-md border border-gray-200 p-1.5 rounded-2xl h-16 shadow-glass">
-                <TabsTrigger value="titulares" className="rounded-2xl px-8 data-[state=active]:bg-[#9E7FFF] data-[state=active]:text-white font-bold text-gray-500 transition-all">
+                <TabsTrigger value="titulares" className="rounded-2xl px-8 data-[state=active]:bg-[#4892CC] data-[state=active]:text-white font-bold text-gray-500 transition-all">
                   <Users className="w-4 h-4 mr-2" /> Titulares y Equipo
                 </TabsTrigger>
-                <TabsTrigger value="finanzas" className="rounded-2xl px-8 data-[state=active]:bg-[#9E7FFF] data-[state=active]:text-white font-bold text-gray-500 transition-all">
+                <TabsTrigger value="finanzas" className="rounded-2xl px-8 data-[state=active]:bg-[#4892CC] data-[state=active]:text-white font-bold text-gray-500 transition-all">
                   <Wallet className="w-4 h-4 mr-2" /> Finanzas y Balance
                 </TabsTrigger>
               </TabsList>
@@ -204,10 +204,10 @@ function Dashboard() {
             )}>
               <Card className={cn(
                 "rounded-2xl border border-gray-100 shadow-premium bg-white p-8 transition-all",
-                !isAdminOrFinanzas && "ring-4 ring-[#9E7FFF]/10"
+                !isAdminOrFinanzas && "ring-4 ring-[#4892CC]/10"
               )}>
                 <div className="flex justify-between items-start mb-6">
-                  <div className="w-14 h-14 bg-[#F0EEFF] rounded-2xl flex items-center justify-center"><Users className="text-[#9E7FFF] w-7 h-7" /></div>
+                  <div className="w-14 h-14 bg-[#E8F1F8] rounded-2xl flex items-center justify-center"><Users className="text-[#4892CC] w-7 h-7" /></div>
                   <Badge className="bg-gray-100 text-gray-500 border-none font-bold">Total</Badge>
                 </div>
                 <h3 className="text-5xl font-black text-gray-900">{socioStats.total}</h3>
@@ -244,14 +244,14 @@ function Dashboard() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-white rounded-2xl shadow-sm flex items-center justify-center"><Briefcase className="text-[#9E7FFF] w-5 h-5" /></div>
+                    <div className="w-10 h-10 bg-white rounded-2xl shadow-sm flex items-center justify-center"><Briefcase className="text-[#4892CC] w-5 h-5" /></div>
                     <h2 className="text-2xl font-black text-gray-900">Equipo de Trabajo</h2>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {colaboradores.slice(0, 4).map((colab) => (
-                      <div key={colab.id} className="bg-white p-6 rounded-2xl border border-gray-100 flex items-center justify-between group hover:border-[#9E7FFF]/30 transition-all">
+                      <div key={colab.id} className="bg-white p-6 rounded-2xl border border-gray-100 flex items-center justify-between group hover:border-[#4892CC]/30 transition-all">
                         <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center font-black text-[#9E7FFF] group-hover:bg-[#F0EEFF]">{colab.name.charAt(0)}</div>
+                          <div className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center font-black text-[#4892CC] group-hover:bg-[#E8F1F8]">{colab.name.charAt(0)}</div>
                           <div>
                             <p className="font-black text-gray-900">{colab.name}</p>
                             <p className="text-xs text-gray-400 font-bold uppercase">{colab.cargo || 'Colaborador'}</p>
@@ -262,17 +262,17 @@ function Dashboard() {
                   </div>
                 </div>
 
-                <Card className="rounded-2xl border border-gray-100 shadow-premium bg-[#171717] p-8 text-white relative overflow-hidden">
+                <Card className="rounded-2xl border border-gray-100 shadow-premium bg-[#373435] p-8 text-white relative overflow-hidden">
                   <div className="relative z-10">
-                    <PieChartIcon className="w-12 h-12 text-[#9E7FFF] mb-6" />
+                    <PieChartIcon className="w-12 h-12 text-[#4892CC] mb-6" />
                     <h3 className="text-2xl font-black mb-2">Distribución</h3>
                     <p className="text-gray-400 font-medium mb-8">Participación de socios por comunidad.</p>
                     <div className="space-y-4">
                       <div className="flex justify-between items-center"><span className="text-sm font-bold text-gray-300">Activos</span><span className="text-sm font-black">88%</span></div>
-                      <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden"><div className="h-full bg-[#9E7FFF] w-[88%]" /></div>
+                      <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden"><div className="h-full bg-[#4892CC] w-[88%]" /></div>
                     </div>
                   </div>
-                  <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-[#9E7FFF]/10 rounded-full blur-3xl" />
+                  <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-[#4892CC]/10 rounded-full blur-3xl" />
                 </Card>
               </div>
             )}
@@ -282,7 +282,7 @@ function Dashboard() {
             <TabsContent value="finanzas" className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white rounded-2xl shadow-sm flex items-center justify-center"><TrendingUp className="text-[#9E7FFF] w-5 h-5" /></div>
+                  <div className="w-10 h-10 bg-white rounded-2xl shadow-sm flex items-center justify-center"><TrendingUp className="text-[#4892CC] w-5 h-5" /></div>
                   <h2 className="text-2xl font-black text-gray-900">Análisis de Flujo</h2>
                 </div>
                 <div className="flex flex-wrap items-center gap-3 bg-white p-2 rounded-2xl border border-gray-200 shadow-sm">
@@ -297,7 +297,7 @@ function Dashboard() {
                   </Select>
                   {filterPeriodType !== 'all' && (
                     <Select value={selectedPeriod} onValueChange={setSelectedPeriod}>
-                      <SelectTrigger className="w-[180px] border-l border-gray-100 bg-transparent font-bold text-[#9E7FFF] focus:ring-0"><SelectValue placeholder="Seleccionar..." /></SelectTrigger>
+                      <SelectTrigger className="w-[180px] border-l border-gray-100 bg-transparent font-bold text-[#4892CC] focus:ring-0"><SelectValue placeholder="Seleccionar..." /></SelectTrigger>
                       <SelectContent className="rounded-2xl">
                         {filterPeriodType === 'month' && periodOptions.months.map(m => <SelectItem key={m.value} value={m.value}>{m.label}</SelectItem>)}
                         {filterPeriodType === 'quarter' && periodOptions.quarters.map(q => <SelectItem key={q.value} value={q.value}>{q.label}</SelectItem>)}
@@ -319,9 +319,9 @@ function Dashboard() {
                       <p className="text-red-600 font-bold text-xs uppercase tracking-widest mb-1">Gastos</p>
                       <h4 className="text-2xl font-black text-red-700">{formatCurrency(filteredData.totalGastos)}</h4>
                     </Card>
-                    <Card className={cn("rounded-2xl border-none shadow-lg p-6", filteredData.balance >= 0 ? "bg-[#F0EEFF]" : "bg-red-50")}>
-                      <p className={cn("font-bold text-xs uppercase tracking-widest mb-1", filteredData.balance >= 0 ? "text-[#9E7FFF]" : "text-red-600")}>Balance Neto</p>
-                      <h4 className={cn("text-2xl font-black", filteredData.balance >= 0 ? "text-[#9E7FFF]" : "text-red-700")}>{formatCurrency(filteredData.balance)}</h4>
+                    <Card className={cn("rounded-2xl border-none shadow-lg p-6", filteredData.balance >= 0 ? "bg-[#E8F1F8]" : "bg-red-50")}>
+                      <p className={cn("font-bold text-xs uppercase tracking-widest mb-1", filteredData.balance >= 0 ? "text-[#4892CC]" : "text-red-600")}>Balance Neto</p>
+                      <h4 className={cn("text-2xl font-black", filteredData.balance >= 0 ? "text-[#4892CC]" : "text-red-700")}>{formatCurrency(filteredData.balance)}</h4>
                     </Card>
                   </div>
 
@@ -352,7 +352,7 @@ function Dashboard() {
                   </div>
                   <Card className="rounded-2xl border border-gray-100 shadow-premium bg-white p-6 space-y-4">
                     <div className="p-5 rounded-3xl bg-gray-50 border border-gray-100 cursor-pointer hover:bg-white hover:shadow-md transition-all group" onClick={() => { setSpecialDialogType('returned'); setIsSpecialDialogOpen(true); }}>
-                      <div className="flex items-center justify-between mb-2"><RefreshCcw className="w-5 h-5 text-[#9E7FFF]" /><Badge className="bg-amber-100 text-amber-600 border-none">Devoluciones</Badge></div>
+                      <div className="flex items-center justify-between mb-2"><RefreshCcw className="w-5 h-5 text-[#4892CC]" /><Badge className="bg-amber-100 text-amber-600 border-none">Devoluciones</Badge></div>
                       <p className="text-2xl font-black text-red-600">{formatCurrency(specialStats.returned)}</p>
                       <p className="text-xs text-gray-400 font-bold uppercase mt-1">Monto total devuelto</p>
                     </div>

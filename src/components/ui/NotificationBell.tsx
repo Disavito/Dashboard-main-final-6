@@ -41,7 +41,7 @@ const NotificationBell: React.FC = () => {
                     {hasPending && (
                         <span className="absolute -top-1 -right-1 flex h-5 w-5">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-5 w-5 bg-red-600 border-2 border-[#171717] text-[10px] font-black text-white items-center justify-center shadow-sm">
+                            <span className="relative inline-flex rounded-full h-5 w-5 bg-red-600 border-2 border-[#373435] text-[10px] font-black text-white items-center justify-center shadow-sm">
                                 {pendingCount}
                             </span>
                         </span>

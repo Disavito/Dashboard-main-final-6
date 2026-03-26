@@ -142,7 +142,7 @@ function SocioStatusAndDocuments({ socioId }: SocioStatusAndDocumentsProps) {
 
   if (isLoading) return (
     <div className="p-24 flex flex-col items-center justify-center bg-white rounded-3xl border border-gray-100 shadow-sm">
-      <Loader2 className="h-12 w-12 animate-spin text-[#9E7FFF]" />
+      <Loader2 className="h-12 w-12 animate-spin text-[#4892CC]" />
       <p className="mt-6 text-gray-400 font-medium">Sincronizando expediente técnico...</p>
     </div>
   );
@@ -152,15 +152,15 @@ function SocioStatusAndDocuments({ socioId }: SocioStatusAndDocumentsProps) {
       <div className="relative overflow-hidden bg-white p-8 rounded-2xl border border-gray-100 shadow-sm group">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
           <div className="flex items-center gap-5">
-            <div className="p-4 bg-[#F0EEFF] rounded-2xl shadow-inner">
-              <Layers className="w-7 h-7 text-[#9E7FFF]" />
+            <div className="p-4 bg-[#E8F1F8] rounded-2xl shadow-inner">
+              <Layers className="w-7 h-7 text-[#4892CC]" />
             </div>
             <div>
               <h2 className="text-2xl font-extrabold text-gray-900 tracking-tight">Expediente de Ingeniería</h2>
               <p className="text-sm text-gray-500 font-medium">Control de medición y planimetría basado en el último estado financiero.</p>
             </div>
           </div>
-          <Button onClick={handleBulkUpdate} disabled={isSubmitting} className="bg-[#9E7FFF] hover:bg-[#8B6EEF] text-white shadow-glass px-8 py-6 rounded-2xl font-bold">
+          <Button onClick={handleBulkUpdate} disabled={isSubmitting} className="bg-[#4892CC] hover:bg-[#3C8B93] text-white shadow-glass px-8 py-6 rounded-2xl font-bold">
             {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin mr-2" /> : <CheckCircle2 className="w-5 h-5 mr-2" />}
             Confirmar Cambios
           </Button>
@@ -180,7 +180,7 @@ function SocioStatusAndDocuments({ socioId }: SocioStatusAndDocumentsProps) {
           </TableHeader>
           <TableBody>
             {lots.map((lot) => (
-              <TableRow key={lot.id} className="group hover:bg-[#F8F9FC]/80 transition-all duration-300 border-b border-gray-50 last:border-0">
+              <TableRow key={lot.id} className="group hover:bg-[#FFFFFF]/80 transition-all duration-300 border-b border-gray-50 last:border-0">
                 <TableCell className="pl-8 py-6">
                   <div className="flex items-center gap-4">
                     <Checkbox 
@@ -189,7 +189,7 @@ function SocioStatusAndDocuments({ socioId }: SocioStatusAndDocumentsProps) {
                         if (checked) setSelectedLotIds([...selectedLotIds, lot.id]);
                         else setSelectedLotIds(selectedLotIds.filter(id => id !== lot.id));
                       }}
-                      className="w-5 h-5 rounded-md border-gray-300 data-[state=checked]:bg-[#9E7FFF] data-[state=checked]:border-[#9E7FFF]"
+                      className="w-5 h-5 rounded-md border-gray-300 data-[state=checked]:bg-[#4892CC] data-[state=checked]:border-[#4892CC]"
                     />
                     <span className={cn(
                       "text-[10px] font-black uppercase tracking-tighter px-2 py-0.5 rounded-md w-fit",
@@ -207,7 +207,7 @@ function SocioStatusAndDocuments({ socioId }: SocioStatusAndDocumentsProps) {
                     </div>
                     <div className="flex flex-col">
                       <span className="font-bold text-gray-900 text-base">Mz. {lot.mz} — Lote {lot.lote}</span>
-                      <span className="text-[11px] font-bold text-[#9E7FFF] uppercase">{lot.isPrimary ? 'Predio Principal' : 'Predio Adicional'}</span>
+                      <span className="text-[11px] font-bold text-[#4892CC] uppercase">{lot.isPrimary ? 'Predio Principal' : 'Predio Adicional'}</span>
                     </div>
                   </div>
                 </TableCell>

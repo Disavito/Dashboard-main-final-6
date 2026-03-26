@@ -202,7 +202,7 @@ export default function InventoryPage() {
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
-        <Loader2 className="h-12 w-12 animate-spin text-[#9E7FFF]" />
+        <Loader2 className="h-12 w-12 animate-spin text-[#4892CC]" />
       </div>
     );
   }
@@ -216,7 +216,7 @@ export default function InventoryPage() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
         <div>
           <h1 className="text-3xl font-black tracking-tight text-slate-900 flex items-center gap-3">
-            <Package className="w-8 h-8 text-[#9E7FFF]" />
+            <Package className="w-8 h-8 text-[#4892CC]" />
             Inventario de Campo
           </h1>
           <p className="text-slate-500 mt-1 font-medium">
@@ -231,7 +231,7 @@ export default function InventoryPage() {
             <Button onClick={() => setIsReturnAllOpen(true)} variant="outline" className="rounded-xl border-slate-200 shadow-sm">
               <ArrowDownToLine className="w-4 h-4 mr-2" /> Recepción Total
             </Button>
-            <Button onClick={() => setIsCheckoutOpen(true)} className="bg-[#9E7FFF] hover:bg-[#8b6ae5] text-white rounded-xl shadow-glass">
+            <Button onClick={() => setIsCheckoutOpen(true)} className="bg-[#4892CC] hover:bg-[#8b6ae5] text-white rounded-xl shadow-glass">
               <ArrowUpFromLine className="w-4 h-4 mr-2" /> Registrar Salida
             </Button>
           </div>
@@ -260,7 +260,7 @@ export default function InventoryPage() {
         </Card>
         <Card className="rounded-2xl border-gray-100 shadow-glass">
           <CardContent className="p-5 text-center">
-            <p className="text-3xl font-black text-[#9E7FFF]">{ingenierosEnCampo}</p>
+            <p className="text-3xl font-black text-[#4892CC]">{ingenierosEnCampo}</p>
             <p className="text-xs font-bold text-slate-400 uppercase mt-1">Ingenieros en Campo</p>
           </CardContent>
         </Card>
@@ -269,13 +269,13 @@ export default function InventoryPage() {
       {/* ── Tabs ────────────────────────────────────── */}
       <Tabs defaultValue="active" className="w-full">
         <TabsList className="bg-white/80 backdrop-blur-md border border-gray-200 p-1.5 rounded-2xl h-14 shadow-sm mb-6 inline-flex">
-          <TabsTrigger value="active" className="rounded-xl px-6 data-[state=active]:bg-[#9E7FFF] data-[state=active]:text-white font-bold text-slate-500 transition-all">
+          <TabsTrigger value="active" className="rounded-xl px-6 data-[state=active]:bg-[#4892CC] data-[state=active]:text-white font-bold text-slate-500 transition-all">
             <UserCheck className="w-4 h-4 mr-2" /> Equipos en Campo
           </TabsTrigger>
-          <TabsTrigger value="catalog" className="rounded-xl px-6 data-[state=active]:bg-[#9E7FFF] data-[state=active]:text-white font-bold text-slate-500 transition-all">
+          <TabsTrigger value="catalog" className="rounded-xl px-6 data-[state=active]:bg-[#4892CC] data-[state=active]:text-white font-bold text-slate-500 transition-all">
             <Box className="w-4 h-4 mr-2" /> Catálogo
           </TabsTrigger>
-          <TabsTrigger value="history" className="rounded-xl px-6 data-[state=active]:bg-[#9E7FFF] data-[state=active]:text-white font-bold text-slate-500 transition-all">
+          <TabsTrigger value="history" className="rounded-xl px-6 data-[state=active]:bg-[#4892CC] data-[state=active]:text-white font-bold text-slate-500 transition-all">
             <History className="w-4 h-4 mr-2" /> Historial
           </TabsTrigger>
         </TabsList>
@@ -294,11 +294,11 @@ export default function InventoryPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {Object.entries(activeByColab).map(([colabId, { name, items: colabItems }]) => (
                 <Card key={colabId} className="rounded-2xl border border-gray-100 shadow-glass overflow-hidden">
-                  <CardHeader className="pb-3 bg-gradient-to-r from-slate-50 to-purple-50/30 border-b border-gray-100">
+                  <CardHeader className="pb-3 bg-gradient-to-r from-slate-50 to-sky-50/30 border-b border-gray-100">
                     <div className="flex items-center justify-between">
                       <CardTitle className="text-base font-black text-slate-800 flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-[#9E7FFF]/10 flex items-center justify-center">
-                          <UserCheck className="w-4 h-4 text-[#9E7FFF]" />
+                        <div className="w-8 h-8 rounded-full bg-[#4892CC]/10 flex items-center justify-center">
+                          <UserCheck className="w-4 h-4 text-[#4892CC]" />
                         </div>
                         {name}
                       </CardTitle>
@@ -377,7 +377,7 @@ export default function InventoryPage() {
                     </div>
                     {/* Barra de progreso */}
                     <div className="w-full bg-gray-100 rounded-full h-2">
-                      <div className="h-2 rounded-full bg-gradient-to-r from-[#9E7FFF] to-[#c4b5fd] transition-all" style={{ width: `${pct}%` }} />
+                      <div className="h-2 rounded-full bg-gradient-to-r from-[#4892CC] to-[#3C9384] transition-all" style={{ width: `${pct}%` }} />
                     </div>
                   </CardContent>
                 </Card>
@@ -460,22 +460,22 @@ export default function InventoryPage() {
             <div className="space-y-2">
               <label className="text-sm font-bold text-slate-700">Nombre</label>
               <Input placeholder="Ej. Casco de Seguridad" value={newName} onChange={e => setNewName(e.target.value)}
-                className="rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#9E7FFF]" />
+                className="rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#4892CC]" />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-bold text-slate-700">Descripción (Opcional)</label>
               <Input placeholder="Color, talla, marca..." value={newDesc} onChange={e => setNewDesc(e.target.value)}
-                className="rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#9E7FFF]" />
+                className="rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#4892CC]" />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-bold text-slate-700">Stock Inicial</label>
               <Input type="number" min="1" value={newQty} onChange={e => setNewQty(e.target.value)}
-                className="rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#9E7FFF]" />
+                className="rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#4892CC]" />
             </div>
           </div>
           <DialogFooter>
             <Button variant="ghost" onClick={() => setIsAddItemOpen(false)} className="rounded-xl">Cancelar</Button>
-            <Button onClick={handleAddItem} disabled={saving} className="bg-[#9E7FFF] hover:bg-[#8b6ae5] text-white rounded-xl">
+            <Button onClick={handleAddItem} disabled={saving} className="bg-[#4892CC] hover:bg-[#8b6ae5] text-white rounded-xl">
               {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Guardar'}
             </Button>
           </DialogFooter>
@@ -494,7 +494,7 @@ export default function InventoryPage() {
             <div className="space-y-2">
               <label className="text-sm font-bold text-slate-700">Ingeniero / Colaborador</label>
               <Select onValueChange={setCheckoutColabId} value={checkoutColabId}>
-                <SelectTrigger className="rounded-xl bg-slate-50 border-slate-200 focus:ring-[#9E7FFF]">
+                <SelectTrigger className="rounded-xl bg-slate-50 border-slate-200 focus:ring-[#4892CC]">
                   <SelectValue placeholder="¿Quién sale a campo?" />
                 </SelectTrigger>
                 <SelectContent className="rounded-xl max-h-60">
@@ -511,7 +511,7 @@ export default function InventoryPage() {
               {checkoutRows.map((row, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <Select onValueChange={v => updateCheckoutRow(index, 'item_id', v)} value={row.item_id}>
-                    <SelectTrigger className="rounded-xl bg-slate-50 border-slate-200 focus:ring-[#9E7FFF] flex-1">
+                    <SelectTrigger className="rounded-xl bg-slate-50 border-slate-200 focus:ring-[#4892CC] flex-1">
                       <SelectValue placeholder="Seleccionar equipo" />
                     </SelectTrigger>
                     <SelectContent className="rounded-xl">
@@ -525,7 +525,7 @@ export default function InventoryPage() {
                   <Input
                     type="number" min="1" value={row.quantity}
                     onChange={e => updateCheckoutRow(index, 'quantity', parseInt(e.target.value) || 1)}
-                    className="w-20 rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#9E7FFF] text-center"
+                    className="w-20 rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#4892CC] text-center"
                   />
                   {checkoutRows.length > 1 && (
                     <Button size="icon" variant="ghost" onClick={() => removeCheckoutRow(index)} className="h-9 w-9 text-slate-400 hover:text-red-500">
@@ -544,12 +544,12 @@ export default function InventoryPage() {
               <label className="text-sm font-bold text-slate-700">Observaciones (Opcional)</label>
               <Input placeholder="Ej. Salida a Zona Norte, proyecto ABC..." value={checkoutNotes}
                 onChange={e => setCheckoutNotes(e.target.value)}
-                className="rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#9E7FFF]" />
+                className="rounded-xl bg-slate-50 border-slate-200 focus-visible:ring-[#4892CC]" />
             </div>
           </div>
           <DialogFooter>
             <Button variant="ghost" onClick={() => setIsCheckoutOpen(false)} className="rounded-xl">Cancelar</Button>
-            <Button onClick={handleCheckout} disabled={saving} className="bg-[#9E7FFF] hover:bg-[#8b6ae5] text-white rounded-xl">
+            <Button onClick={handleCheckout} disabled={saving} className="bg-[#4892CC] hover:bg-[#8b6ae5] text-white rounded-xl">
               {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Confirmar Salida'}
             </Button>
           </DialogFooter>
@@ -567,7 +567,7 @@ export default function InventoryPage() {
             <div className="space-y-2">
               <label className="text-sm font-bold text-slate-700">Ingeniero que regresa</label>
               <Select onValueChange={setReturnAllColabId} value={returnAllColabId}>
-                <SelectTrigger className="rounded-xl bg-slate-50 border-slate-200 focus:ring-[#9E7FFF]">
+                <SelectTrigger className="rounded-xl bg-slate-50 border-slate-200 focus:ring-[#4892CC]">
                   <SelectValue placeholder="Seleccionar colaborador" />
                 </SelectTrigger>
                 <SelectContent className="rounded-xl max-h-60">

@@ -13,7 +13,7 @@ const Header: React.FC = () => {
             <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center space-x-4">
                     <h1 className="text-2xl font-extrabold text-primary tracking-wider">
-                        <Link to="/">BOLT DASHBOARD</Link>
+                        <Link to="/">Corporación FIMAGADI</Link>
                     </h1>
                 </div>
                 <nav className="flex items-center space-x-4">

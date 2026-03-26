@@ -61,7 +61,7 @@ const AuthPage: React.FC = () => {
       <Card className="w-full max-w-md bg-surface border-border shadow-premium rounded-xl overflow-hidden">
         <CardHeader className="text-center p-6 bg-card border-b border-border">
           <CardTitle className="text-3xl font-extrabold text-primary mb-2">
-            {isSignIn ? 'Bienvenido de nuevo' : 'Únete a FinDash'}
+            {isSignIn ? 'Bienvenido de nuevo' : 'Únete a FIMAGADI'}
           </CardTitle>
           <CardDescription className="text-textSecondary text-md">
             {isSignIn ? 'Inicia sesión para acceder a tu dashboard.' : 'Crea una cuenta para empezar a gestionar tus finanzas.'}

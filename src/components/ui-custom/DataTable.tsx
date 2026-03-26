@@ -107,7 +107,7 @@ export function DataTable<TData, TValue>({
               <TableRow>
                 <TableCell colSpan={columns.length} className="h-48 text-center">
                   <div className="flex flex-col items-center justify-center gap-3">
-                    <Loader2 className="h-8 w-8 animate-spin text-[#9E7FFF]" />
+                    <Loader2 className="h-8 w-8 animate-spin text-[#4892CC]" />
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Cargando datos...</p>
                   </div>
                 </TableCell>
@@ -147,7 +147,7 @@ export function DataTable<TData, TValue>({
           <Button
             variant="outline"
             size="sm"
-            className="rounded-xl border-gray-200 font-bold text-gray-600 hover:bg-[#F0EEFF] hover:text-[#9E7FFF] transition-all"
+            className="rounded-xl border-gray-200 font-bold text-gray-600 hover:bg-[#E8F1F8] hover:text-[#4892CC] transition-all"
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
@@ -156,7 +156,7 @@ export function DataTable<TData, TValue>({
           <Button
             variant="outline"
             size="sm"
-            className="rounded-xl border-gray-200 font-bold text-gray-600 hover:bg-[#F0EEFF] hover:text-[#9E7FFF] transition-all"
+            className="rounded-xl border-gray-200 font-bold text-gray-600 hover:bg-[#E8F1F8] hover:text-[#4892CC] transition-all"
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >

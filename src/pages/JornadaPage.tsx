@@ -21,7 +21,7 @@ const JornadaPage = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-[60vh]">
-        <Loader2 className="h-8 w-8 animate-spin text-[#9E7FFF]" />
+        <Loader2 className="h-8 w-8 animate-spin text-[#4892CC]" />
       </div>
     );
   }

@@ -76,21 +76,21 @@ const Socios: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="h-screen flex flex-col items-center justify-center bg-[#F8F9FC]">
-        <Loader2 className="w-12 h-12 animate-spin text-[#9E7FFF] mb-4" />
+      <div className="h-screen flex flex-col items-center justify-center bg-[#FFFFFF]">
+        <Loader2 className="w-12 h-12 animate-spin text-[#4892CC] mb-4" />
         <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">Sincronizando Padrón de Socios...</p>
       </div>
     );
   }
 
   return (
-    <div className="p-4 md:p-8 bg-[#F8F9FC] min-h-screen space-y-8">
+    <div className="p-4 md:p-8 bg-[#FFFFFF] min-h-screen space-y-8">
       <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-black text-slate-900 uppercase tracking-tight">Padrón de <span className="text-[#9E7FFF]">Socios</span></h1>
+          <h1 className="text-3xl font-black text-slate-900 uppercase tracking-tight">Padrón de <span className="text-[#4892CC]">Socios</span></h1>
           <p className="text-slate-500 font-medium">Gestión de estados y expedientes técnicos</p>
         </div>
-        <Button className="bg-[#9E7FFF] hover:bg-[#8B6EEF] text-white font-bold rounded-xl px-6 h-12 shadow-lg shadow-[#9E7FFF]/20">
+        <Button className="bg-[#4892CC] hover:bg-[#3C8B93] text-white font-bold rounded-xl px-6 h-12 shadow-lg shadow-[#4892CC]/20">
           <UserPlus className="w-5 h-5 mr-2" /> Nuevo Socio
         </Button>
       </header>
@@ -100,7 +100,7 @@ const Socios: React.FC = () => {
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
           <Input 
             placeholder="Buscar por nombre o DNI..." 
-            className="pl-12 h-14 bg-white border-none rounded-2xl shadow-sm text-lg font-medium focus:ring-2 focus:ring-[#9E7FFF]/20"
+            className="pl-12 h-14 bg-white border-none rounded-2xl shadow-sm text-lg font-medium focus:ring-2 focus:ring-[#4892CC]/20"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -126,11 +126,11 @@ const Socios: React.FC = () => {
               <TableRow key={socio.id} className="group hover:bg-slate-50/50 transition-colors border-b border-slate-50 last:border-0">
                 <TableCell className="pl-8 py-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#F0EEFF] flex items-center justify-center text-[#9E7FFF] font-black text-lg shadow-sm">
+                    <div className="w-12 h-12 rounded-2xl bg-[#E8F1F8] flex items-center justify-center text-[#4892CC] font-black text-lg shadow-sm">
                       {socio.nombres[0]}{socio.apellidoPaterno[0]}
                     </div>
                     <div className="flex flex-col">
-                      <span className="font-black text-slate-900 uppercase tracking-tight group-hover:text-[#9E7FFF] transition-colors">
+                      <span className="font-black text-slate-900 uppercase tracking-tight group-hover:text-[#4892CC] transition-colors">
                         {socio.nombres} {socio.apellidoPaterno}
                       </span>
                       <span className="text-xs font-mono text-slate-400 font-bold flex items-center gap-1">
@@ -178,7 +178,7 @@ const Socios: React.FC = () => {
                 </TableCell>
 
                 <TableCell className="pr-8 text-right">
-                  <Button variant="ghost" size="icon" className="rounded-xl hover:bg-[#F0EEFF] hover:text-[#9E7FFF]">
+                  <Button variant="ghost" size="icon" className="rounded-xl hover:bg-[#E8F1F8] hover:text-[#4892CC]">
                     <MoreHorizontal className="w-5 h-5" />
                   </Button>
                 </TableCell>

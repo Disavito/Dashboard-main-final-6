@@ -131,8 +131,8 @@ export default function ExportSociosDialog({ data, onClose }: ExportSociosDialog
       {/* Header Fijo */}
       <div className="p-6 md:p-8 pb-4 border-b border-gray-50">
         <div className="flex items-center justify-between mb-4">
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-[#9E7FFF]/10 rounded-2xl flex items-center justify-center">
-            <Settings2 className="h-5 w-5 md:h-6 md:w-6 text-[#9E7FFF]" />
+          <div className="w-10 h-10 md:w-12 md:h-12 bg-[#4892CC]/10 rounded-2xl flex items-center justify-center">
+            <Settings2 className="h-5 w-5 md:h-6 md:w-6 text-[#4892CC]" />
           </div>
           <Button variant="ghost" size="icon" onClick={onClose} className="md:hidden rounded-full">
             <X className="h-5 w-5 text-gray-400" />
@@ -160,7 +160,7 @@ export default function ExportSociosDialog({ data, onClose }: ExportSociosDialog
                 className={cn(
                   "flex flex-col items-center justify-center p-3 md:p-4 rounded-2xl border-2 transition-all gap-2 relative",
                   format === f.id 
-                    ? "border-[#9E7FFF] bg-[#9E7FFF]/5 shadow-sm" 
+                    ? "border-[#4892CC] bg-[#4892CC]/5 shadow-sm" 
                     : "border-gray-100 hover:border-gray-200 bg-white"
                 )}
               >
@@ -168,7 +168,7 @@ export default function ExportSociosDialog({ data, onClose }: ExportSociosDialog
                   <f.icon className={cn("h-5 w-5 md:h-6 md:w-6", f.color)} />
                 </div>
                 <span className="text-[10px] md:text-xs font-black uppercase tracking-wider text-gray-700">{f.label}</span>
-                {format === f.id && <CheckCircle2 className="h-3 w-3 md:h-4 md:w-4 text-[#9E7FFF] absolute top-2 right-2" />}
+                {format === f.id && <CheckCircle2 className="h-3 w-3 md:h-4 md:w-4 text-[#4892CC] absolute top-2 right-2" />}
               </button>
             ))}
           </div>
@@ -188,7 +188,7 @@ export default function ExportSociosDialog({ data, onClose }: ExportSociosDialog
                       key={field.id} 
                       className={cn(
                         "flex items-center space-x-3 p-3 rounded-xl border transition-colors cursor-pointer",
-                        selectedFields.includes(field.id) ? "border-[#9E7FFF]/30 bg-[#9E7FFF]/5" : "border-gray-100 hover:bg-gray-50"
+                        selectedFields.includes(field.id) ? "border-[#4892CC]/30 bg-[#4892CC]/5" : "border-gray-100 hover:bg-gray-50"
                       )}
                       onClick={() => toggleField(field.id)}
                     >
@@ -196,7 +196,7 @@ export default function ExportSociosDialog({ data, onClose }: ExportSociosDialog
                         id={field.id} 
                         checked={selectedFields.includes(field.id)}
                         onCheckedChange={() => toggleField(field.id)}
-                        className="data-[state=checked]:bg-[#9E7FFF] data-[state=checked]:border-[#9E7FFF]"
+                        className="data-[state=checked]:bg-[#4892CC] data-[state=checked]:border-[#4892CC]"
                       />
                       <Label htmlFor={field.id} className="text-xs md:text-sm font-bold text-gray-700 cursor-pointer flex-1">
                         {field.label}
@@ -222,7 +222,7 @@ export default function ExportSociosDialog({ data, onClose }: ExportSociosDialog
         <Button 
           onClick={handleExport} 
           disabled={isExporting}
-          className="bg-[#9E7FFF] hover:bg-[#8B6EEF] text-white rounded-xl font-bold px-8 h-12 shadow-lg shadow-[#9E7FFF]/20 order-1 sm:order-2 w-full sm:w-auto"
+          className="bg-[#4892CC] hover:bg-[#3C8B93] text-white rounded-xl font-bold px-8 h-12 shadow-lg shadow-[#4892CC]/20 order-1 sm:order-2 w-full sm:w-auto"
         >
           {isExporting ? (
             <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generando...</>

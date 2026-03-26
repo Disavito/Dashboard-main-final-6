@@ -8,6 +8,13 @@ export default {
         sans: ['"Outfit"', 'sans-serif'],
       },
       colors: {
+        corp: {
+          dark: '#373435',
+          blue: '#4892CC',
+          teal: '#3C8B93',
+          green: '#3C9384',
+          gray: '#CECECE',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
